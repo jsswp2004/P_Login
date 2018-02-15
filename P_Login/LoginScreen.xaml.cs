@@ -28,7 +28,7 @@ namespace P_Login
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection sqlCon = new SqlConnection(@"Data Source=1AISV01027CL001;Initial Catalog=DBPOWER;Integrated Security=True");
-                //(@"Data Source=LAPTOP-63DBDN64\POWER_DB01;Integrated Security=SSPI;Initial Catalog=LoginDB");
+            //SqlConnection sqlCon = new SqlConnection(@"Data Source=LAPTOP-63DBDN64\POWER_DB01;Integrated Security=SSPI;Initial Catalog=LoginDB");
             try
             {
                 if (sqlCon.State == System.Data.ConnectionState.Closed)
