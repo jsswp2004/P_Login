@@ -34,8 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -66,6 +75,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ClientVisitOPD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientVisitOPD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientVisitOPD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientVisitOPD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientVisitOPD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientVisitOPD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientVisit_OPD.cs">
+      <DependentUpon>POWERPatient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClienVisitBackUp.cs">
+      <DependentUpon>POWERPatient.tt</DependentUpon>
+    </Compile>
     <Compile Include="LoginScreen.xaml.cs">
       <DependentUpon>LoginScreen.xaml</DependentUpon>
     </Compile>
@@ -75,6 +105,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="POWERPatient.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POWERPatient.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POWERPatient.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POWERPatient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POWERPatient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POWERPatient.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -92,6 +137,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="ClientVisitOPD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClientVisitOPD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClientVisitOPD.edmx.diagram">
+      <DependentUpon>ClientVisitOPD.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="POWERPatient.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>POWERPatient.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="POWERPatient.edmx.diagram">
+      <DependentUpon>POWERPatient.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ClientVisit_OPD.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,6 +166,31 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\PowerIcon01_48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientVisitOPD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ClientVisitOPD.Context.cs</LastGenOutput>
+      <DependentUpon>ClientVisitOPD.edmx</DependentUpon>
+    </Content>
+    <Content Include="ClientVisitOPD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClientVisitOPD.edmx</DependentUpon>
+      <LastGenOutput>ClientVisitOPD.cs</LastGenOutput>
+    </Content>
+    <Content Include="POWERPatient.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POWERPatient.edmx</DependentUpon>
+      <LastGenOutput>POWERPatient.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="POWERPatient.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POWERPatient.edmx</DependentUpon>
+      <LastGenOutput>POWERPatient.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

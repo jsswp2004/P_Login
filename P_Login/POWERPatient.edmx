@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="POWERPatientModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClientVisit_OPD">
+          <Key>
+            <PropertyRef Name="ClientGUID" />
+          </Key>
+          <Property Name="ClientVisitGUID" Type="bigint" />
+          <Property Name="ClientGUID" Type="bigint" Nullable="false" />
+          <Property Name="ChartGUID" Type="bigint" />
+          <Property Name="ClientDisplayName" Type="nvarchar" MaxLength="255" />
+          <Property Name="MRN" Type="int" />
+          <Property Name="VisitID" Type="int" />
+          <Property Name="CurrentLocation" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypeCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="AGE" Type="int" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="GenderCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="Facility" Type="nvarchar" MaxLength="255" />
+          <Property Name="AdmitDTM" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'POWER.dbo.ClienVisitBackUp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ClienVisitBackUp">
+          <Key>
+            <PropertyRef Name="column1" />
+            <PropertyRef Name="column2" />
+            <PropertyRef Name="column3" />
+            <PropertyRef Name="column4" />
+            <PropertyRef Name="column5" />
+            <PropertyRef Name="column6" />
+            <PropertyRef Name="column7" />
+            <PropertyRef Name="column8" />
+            <PropertyRef Name="column9" />
+            <PropertyRef Name="column10" />
+            <PropertyRef Name="column11" />
+            <PropertyRef Name="column12" />
+            <PropertyRef Name="column13" />
+            <PropertyRef Name="column14" />
+            <PropertyRef Name="column15" />
+            <PropertyRef Name="column16" />
+            <PropertyRef Name="column17" />
+            <PropertyRef Name="IDCode" />
+            <PropertyRef Name="VisitIDCode" />
+            <PropertyRef Name="TypeCode" />
+            <PropertyRef Name="CareLevelCode" />
+            <PropertyRef Name="ServiceGUID" />
+            <PropertyRef Name="VisitTypeCareLevelGUID" />
+            <PropertyRef Name="PatientName" />
+            <PropertyRef Name="ProviderDisplayName" />
+            <PropertyRef Name="column26" />
+            <PropertyRef Name="column27" />
+            <PropertyRef Name="column28" />
+            <PropertyRef Name="column29" />
+            <PropertyRef Name="column30" />
+            <PropertyRef Name="column31" />
+            <PropertyRef Name="column32" />
+            <PropertyRef Name="column33" />
+            <PropertyRef Name="column34" />
+            <PropertyRef Name="column35" />
+            <PropertyRef Name="column36" />
+            <PropertyRef Name="column37" />
+            <PropertyRef Name="column38" />
+            <PropertyRef Name="column39" />
+            <PropertyRef Name="column40" />
+            <PropertyRef Name="column41" />
+            <PropertyRef Name="column42" />
+          </Key>
+          <Property Name="column1" Type="int" Nullable="false" />
+          <Property Name="column2" Type="int" Nullable="false" />
+          <Property Name="column3" Type="int" Nullable="false" />
+          <Property Name="column4" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column5" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="column6" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column7" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="column8" Type="int" Nullable="false" />
+          <Property Name="column9" Type="float" Nullable="false" />
+          <Property Name="column10" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column11" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column12" Type="int" Nullable="false" />
+          <Property Name="column13" Type="float" Nullable="false" />
+          <Property Name="column14" Type="float" Nullable="false" />
+          <Property Name="column15" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="column16" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column17" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VisitIDCode" Type="int" Nullable="false" />
+          <Property Name="TypeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CareLevelCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ServiceGUID" Type="int" Nullable="false" />
+          <Property Name="VisitTypeCareLevelGUID" Type="int" Nullable="false" />
+          <Property Name="PatientName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProviderDisplayName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column26" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column27" Type="int" Nullable="false" />
+          <Property Name="column28" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column29" Type="int" Nullable="false" />
+          <Property Name="column30" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column31" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column32" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column33" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column34" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column35" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column36" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column37" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column38" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column39" Type="int" Nullable="false" />
+          <Property Name="column40" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column41" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="column42" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="POWERPatientModelStoreContainer">
+          <EntitySet Name="ClientVisit_OPD" EntityType="Self.ClientVisit_OPD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClienVisitBackUp" EntityType="Self.ClienVisitBackUp" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ClienVisitBackUp].[column1] AS [column1], 
+    [ClienVisitBackUp].[column2] AS [column2], 
+    [ClienVisitBackUp].[column3] AS [column3], 
+    [ClienVisitBackUp].[column4] AS [column4], 
+    [ClienVisitBackUp].[column5] AS [column5], 
+    [ClienVisitBackUp].[column6] AS [column6], 
+    [ClienVisitBackUp].[column7] AS [column7], 
+    [ClienVisitBackUp].[column8] AS [column8], 
+    [ClienVisitBackUp].[column9] AS [column9], 
+    [ClienVisitBackUp].[column10] AS [column10], 
+    [ClienVisitBackUp].[column11] AS [column11], 
+    [ClienVisitBackUp].[column12] AS [column12], 
+    [ClienVisitBackUp].[column13] AS [column13], 
+    [ClienVisitBackUp].[column14] AS [column14], 
+    [ClienVisitBackUp].[column15] AS [column15], 
+    [ClienVisitBackUp].[column16] AS [column16], 
+    [ClienVisitBackUp].[column17] AS [column17], 
+    [ClienVisitBackUp].[IDCode] AS [IDCode], 
+    [ClienVisitBackUp].[VisitIDCode] AS [VisitIDCode], 
+    [ClienVisitBackUp].[TypeCode] AS [TypeCode], 
+    [ClienVisitBackUp].[CareLevelCode] AS [CareLevelCode], 
+    [ClienVisitBackUp].[ServiceGUID] AS [ServiceGUID], 
+    [ClienVisitBackUp].[VisitTypeCareLevelGUID] AS [VisitTypeCareLevelGUID], 
+    [ClienVisitBackUp].[PatientName] AS [PatientName], 
+    [ClienVisitBackUp].[ProviderDisplayName] AS [ProviderDisplayName], 
+    [ClienVisitBackUp].[column26] AS [column26], 
+    [ClienVisitBackUp].[column27] AS [column27], 
+    [ClienVisitBackUp].[column28] AS [column28], 
+    [ClienVisitBackUp].[column29] AS [column29], 
+    [ClienVisitBackUp].[column30] AS [column30], 
+    [ClienVisitBackUp].[column31] AS [column31], 
+    [ClienVisitBackUp].[column32] AS [column32], 
+    [ClienVisitBackUp].[column33] AS [column33], 
+    [ClienVisitBackUp].[column34] AS [column34], 
+    [ClienVisitBackUp].[column35] AS [column35], 
+    [ClienVisitBackUp].[column36] AS [column36], 
+    [ClienVisitBackUp].[column37] AS [column37], 
+    [ClienVisitBackUp].[column38] AS [column38], 
+    [ClienVisitBackUp].[column39] AS [column39], 
+    [ClienVisitBackUp].[column40] AS [column40], 
+    [ClienVisitBackUp].[column41] AS [column41], 
+    [ClienVisitBackUp].[column42] AS [column42]
+    FROM [dbo].[ClienVisitBackUp] AS [ClienVisitBackUp]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="POWERPatientModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClientVisit_OPD">
+          <Key>
+            <PropertyRef Name="ClientGUID" />
+          </Key>
+          <Property Name="ClientVisitGUID" Type="Int64" />
+          <Property Name="ClientGUID" Type="Int64" Nullable="false" />
+          <Property Name="ChartGUID" Type="Int64" />
+          <Property Name="ClientDisplayName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MRN" Type="Int32" />
+          <Property Name="VisitID" Type="Int32" />
+          <Property Name="CurrentLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TypeCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="AGE" Type="Int32" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GenderCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Facility" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AdmitDTM" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ClienVisitBackUp">
+          <Key>
+            <PropertyRef Name="column1" />
+            <PropertyRef Name="column2" />
+            <PropertyRef Name="column3" />
+            <PropertyRef Name="column4" />
+            <PropertyRef Name="column5" />
+            <PropertyRef Name="column6" />
+            <PropertyRef Name="column7" />
+            <PropertyRef Name="column8" />
+            <PropertyRef Name="column9" />
+            <PropertyRef Name="column10" />
+            <PropertyRef Name="column11" />
+            <PropertyRef Name="column12" />
+            <PropertyRef Name="column13" />
+            <PropertyRef Name="column14" />
+            <PropertyRef Name="column15" />
+            <PropertyRef Name="column16" />
+            <PropertyRef Name="column17" />
+            <PropertyRef Name="IDCode" />
+            <PropertyRef Name="VisitIDCode" />
+            <PropertyRef Name="TypeCode" />
+            <PropertyRef Name="CareLevelCode" />
+            <PropertyRef Name="ServiceGUID" />
+            <PropertyRef Name="VisitTypeCareLevelGUID" />
+            <PropertyRef Name="PatientName" />
+            <PropertyRef Name="ProviderDisplayName" />
+            <PropertyRef Name="column26" />
+            <PropertyRef Name="column27" />
+            <PropertyRef Name="column28" />
+            <PropertyRef Name="column29" />
+            <PropertyRef Name="column30" />
+            <PropertyRef Name="column31" />
+            <PropertyRef Name="column32" />
+            <PropertyRef Name="column33" />
+            <PropertyRef Name="column34" />
+            <PropertyRef Name="column35" />
+            <PropertyRef Name="column36" />
+            <PropertyRef Name="column37" />
+            <PropertyRef Name="column38" />
+            <PropertyRef Name="column39" />
+            <PropertyRef Name="column40" />
+            <PropertyRef Name="column41" />
+            <PropertyRef Name="column42" />
+          </Key>
+          <Property Name="column1" Type="Int32" Nullable="false" />
+          <Property Name="column2" Type="Int32" Nullable="false" />
+          <Property Name="column3" Type="Int32" Nullable="false" />
+          <Property Name="column4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column5" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="column6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column7" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="column8" Type="Int32" Nullable="false" />
+          <Property Name="column9" Type="Double" Nullable="false" />
+          <Property Name="column10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column12" Type="Int32" Nullable="false" />
+          <Property Name="column13" Type="Double" Nullable="false" />
+          <Property Name="column14" Type="Double" Nullable="false" />
+          <Property Name="column15" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="column16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VisitIDCode" Type="Int32" Nullable="false" />
+          <Property Name="TypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CareLevelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServiceGUID" Type="Int32" Nullable="false" />
+          <Property Name="VisitTypeCareLevelGUID" Type="Int32" Nullable="false" />
+          <Property Name="PatientName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderDisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column26" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column27" Type="Int32" Nullable="false" />
+          <Property Name="column28" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column29" Type="Int32" Nullable="false" />
+          <Property Name="column30" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column31" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column32" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column33" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column34" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column35" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column36" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column37" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column38" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column39" Type="Int32" Nullable="false" />
+          <Property Name="column40" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column41" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="column42" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="POWERPatientEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientVisit_OPD" EntityType="Self.ClientVisit_OPD" />
+          <EntitySet Name="ClienVisitBackUps" EntityType="Self.ClienVisitBackUp" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="POWERPatientModelStoreContainer" CdmEntityContainer="POWERPatientEntity">
+          <EntitySetMapping Name="ClientVisit_OPD">
+            <EntityTypeMapping TypeName="POWERPatientModel.ClientVisit_OPD">
+              <MappingFragment StoreEntitySet="ClientVisit_OPD">
+                <ScalarProperty Name="ClientVisitGUID" ColumnName="ClientVisitGUID" />
+                <ScalarProperty Name="ClientGUID" ColumnName="ClientGUID" />
+                <ScalarProperty Name="ChartGUID" ColumnName="ChartGUID" />
+                <ScalarProperty Name="ClientDisplayName" ColumnName="ClientDisplayName" />
+                <ScalarProperty Name="MRN" ColumnName="MRN" />
+                <ScalarProperty Name="VisitID" ColumnName="VisitID" />
+                <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+                <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="AGE" ColumnName="AGE" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
+                <ScalarProperty Name="Facility" ColumnName="Facility" />
+                <ScalarProperty Name="AdmitDTM" ColumnName="AdmitDTM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClienVisitBackUps">
+            <EntityTypeMapping TypeName="POWERPatientModel.ClienVisitBackUp">
+              <MappingFragment StoreEntitySet="ClienVisitBackUp">
+                <ScalarProperty Name="column1" ColumnName="column1" />
+                <ScalarProperty Name="column2" ColumnName="column2" />
+                <ScalarProperty Name="column3" ColumnName="column3" />
+                <ScalarProperty Name="column4" ColumnName="column4" />
+                <ScalarProperty Name="column5" ColumnName="column5" />
+                <ScalarProperty Name="column6" ColumnName="column6" />
+                <ScalarProperty Name="column7" ColumnName="column7" />
+                <ScalarProperty Name="column8" ColumnName="column8" />
+                <ScalarProperty Name="column9" ColumnName="column9" />
+                <ScalarProperty Name="column10" ColumnName="column10" />
+                <ScalarProperty Name="column11" ColumnName="column11" />
+                <ScalarProperty Name="column12" ColumnName="column12" />
+                <ScalarProperty Name="column13" ColumnName="column13" />
+                <ScalarProperty Name="column14" ColumnName="column14" />
+                <ScalarProperty Name="column15" ColumnName="column15" />
+                <ScalarProperty Name="column16" ColumnName="column16" />
+                <ScalarProperty Name="column17" ColumnName="column17" />
+                <ScalarProperty Name="IDCode" ColumnName="IDCode" />
+                <ScalarProperty Name="VisitIDCode" ColumnName="VisitIDCode" />
+                <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+                <ScalarProperty Name="CareLevelCode" ColumnName="CareLevelCode" />
+                <ScalarProperty Name="ServiceGUID" ColumnName="ServiceGUID" />
+                <ScalarProperty Name="VisitTypeCareLevelGUID" ColumnName="VisitTypeCareLevelGUID" />
+                <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+                <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
+                <ScalarProperty Name="column26" ColumnName="column26" />
+                <ScalarProperty Name="column27" ColumnName="column27" />
+                <ScalarProperty Name="column28" ColumnName="column28" />
+                <ScalarProperty Name="column29" ColumnName="column29" />
+                <ScalarProperty Name="column30" ColumnName="column30" />
+                <ScalarProperty Name="column31" ColumnName="column31" />
+                <ScalarProperty Name="column32" ColumnName="column32" />
+                <ScalarProperty Name="column33" ColumnName="column33" />
+                <ScalarProperty Name="column34" ColumnName="column34" />
+                <ScalarProperty Name="column35" ColumnName="column35" />
+                <ScalarProperty Name="column36" ColumnName="column36" />
+                <ScalarProperty Name="column37" ColumnName="column37" />
+                <ScalarProperty Name="column38" ColumnName="column38" />
+                <ScalarProperty Name="column39" ColumnName="column39" />
+                <ScalarProperty Name="column40" ColumnName="column40" />
+                <ScalarProperty Name="column41" ColumnName="column41" />
+                <ScalarProperty Name="column42" ColumnName="column42" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
